@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Disasters</title>
+    <meta charset="UTF-8">
+        <!-- favicon -->
+        <!-- <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon"> -->
+        <!-- <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"> -->
+        <link rel="icon" type="image/JPG" sizes="16x16" href="/assets/img/favicon-32x32.png">
+        <!-- bootstrap css cdn -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <!-- css stylesheet -->
+        <link rel="stylesheet" href="static/css/style.css">
+        <!-- font styles cdn -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+          .container
+          {
+            background-color: green;
+          }
+          .our-focus 
+          {
+            background-color: green;
+          }
+          .site-footer
+          {
+            background-color: green;
+          }
+
+          .container-fluid{
+            background-color:green;
+            width: 100%;
+          }
+          body{
+            background-color:green;
+          }
+          .navbar{
+            background-color:green;
+          }
+        
+        #img{
+          width:89.7%;
+          height: 435px;
+          float: center;
+          margin-left: 5.6%;
+          background-color: rgb(116, 81, 107);
+        }
+        </style>
+        <script>
+          var img= ["http://blog.newhomesource.com/wp-content/uploads/2019/12/lightning.jpg",
+  "https://clovered.com/wp-content/uploads/2020/05/10-Top-Emergency-Preparedness-Tips-for-Natural-Disasters-1000px-min.jpg", 
+  "https://www.pandotrip.com/wp-content/uploads/2014/01/kansas-Phil-Degginger.jpg", 
+ 
+   "https://fact24.com/wp-content/uploads/2020/08/fact24-applications-naturaldisaster-floodingH500px_Q60.jpg",
+   "https://www.holidify.com/images/cmsuploads/compressed/officiallynologo1174400271710104179145826729903381098730917n_20200814191132.jpg",
+   "https://riskandinsurance.com/wp-content/uploads/2021/02/natural-disaster.jpg",
+   "https://nypost.com/wp-content/uploads/sites/2/2018/01/20180122_zaa_p133_322.jpg?quality=80&strip=all",
+   "https://i.ytimg.com/vi/a3d7tJhMc1k/maxresdefault.jpg"
+];
+
+var i=0;
+
+function im(){
+    
+    if(i<img.length){
+        
+      let sr=document.getElementById('img');
+      sr.src=img[i];
+      
+      i++;
+    }
+    else{
+        
+        i=0;
+    }
+    
+}
+
+setInterval(im,1000);
+          </script>
+        
+</head>
+<body  >
+        <!-- bootstrap navbar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark"  >
+            <div class="container-fluid" >
+              
+         <div class="ab" >
+
+              </div>
+              <div class="row donate-sponsor">
+               
+   
+               
+                 {% for school in schools %}
+                <a type="button" class="btn btn-success mr-1" id="donate" href="{{school.key}}">EarthQuake Prediction</a>
+                 {% endfor %}
+                <a type="button" class="btn btn-warning mr-1" id="sponsor" href="cyclone">Cyclone Prediction</a>
+                <a type="button" class="btn btn-primary mr-1" id="sponsor" href="flood">Flood Prediction</a>
+                 <a type="button" class="btn btn-danger mr-1" id="sponsor" href="contactus">Contact Us</a>
+             
+              </div>
+            </div>
+          </nav>
+
+          <!-- navbar ends -->
+       <!-- what we focus on -->
+       <h2 class="text-center mt-3" style="font-size:50px;color:red;text-shadow: 10px 10px 20px blue">Natural Disasters Prediction Using Machine Learning<br/><br/></h2>
+       <div class="mnopk" style="background-color: green;">
+        
+        <img src="http://blog.newhomesource.com/wp-content/uploads/2019/12/lightning.jpg"  id="img"/>
+        <script src="imageslider.js">
+
+          </script>
+       </div>
+        <section class="our-focus">
+          <div class="container">
+              
+  
+             
+                  <div class="card" style="width: 53rem;margin-left: -120px;margin-top: 10px;">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Vission & Mission</h5>
+                      <p class="card-text">Disasters - natural or human-made are common throughout the world. 
+                        It is believed that in the recent past there is an increase in their magnitude, complexity, frequency and economic impact.
+                         India is at the highest risk of exposure to natural hazards in the world.
+                         ML and AI, when combined, can help responders:
+                         - track and predict disaster trajectory;
+                         - identify location-based urgent needs and most impacted regions;
+                          </p>
+                    </div>
+                  </div>
+                </div>
+               
+                  <div class="card" style="width: 32rem;margin-left: 935px;margin-top: -174.3px; ">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Objective</h5>
+                      <p class="card-text">To find out ways of prevention of disaster<br/>To identify the use of artificial intelligence in disaster<br/>
+                     To Prediction of Natural Disasters & send early warning messages.<br/>Life-saving aid to most impacted or at risk regions
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- focus section ends -->
+
+        <!-- footer starts -->
+          <!-- Site footer -->
+          <footer class="nope" style="background-color:black;color: red;">
+            <div class="container mt-5" style="background-color:black;color: red;">
+              <div class="row" style="background-color:black;color: red;">
+                <div class="lokip" style="width:500px;margin-left:-9%;background-color:black;color: red;">
+                  <h3>About Us</h3>
+                  <p class="text-justify" style="color: white;">When we are started looking up suddenly occurance of natural disasters without giving early
+                    warning , so we decided to analyze previous occurance of natural disasters & Building the Model 
+                    for the future occurance for the prediction of the natural disasters . </p>
+</div>
+                  <div class="lokiq" style="width:300px;margin-left:03%;margin-top: 0px; background-color:black;color: red;">
+                    <h3>Team Members</h3>
+                    <h6 style="color: white;margin-left:03%">LOKESHA E J</h3>
+                    <h6 style="color: white;margin-left:03%">ANIL R</h3>
+                    <h6 style="color: white;margin-left:03%">KARTHIK TT</h3>
+                    <h6 style="color: white;margin-left:03%">YESHWANTH G</h3>
+                    <div class="lokir" style="width:180px;margin-left:128%;margin-top: -150px;color: red;">
+                    
+                  
+                      <style>
+                        .fa {
+                          padding: 10px;
+                          font-size: 20px;
+                          width: 30px;
+                          text-align: center;
+                          text-decoration: none;
+                          margin: 5px 2px;
+                        }
+                        .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+</style>
+                    <h3>Social Media</h3>
+                    <a href="https://www.facebook.com/lokesha.ej.3" class="fa fa-facebook" style="font-size: 20px;margin-left: 0%; margin-top: 2%; "></a><p style="color: white; margin-left: 25%; margin-top: -23%;">Lokesha E J</p>
+                    <a href="https://www.facebook.com/anil.sunil.5817" class="fa fa-facebook" style="font-size: 20px;margin-left: 0%; margin-top: 2%; "></a><p style="color: white;margin-left: 25%; margin-top: -23%;">Anil R</p>
+                  </div><div class="loj" style=" width:150px;margin-left: 195%; margin-top: -28%">
+                    <a href="#" class="fa fa-facebook"style="font-size: 20px;margin-left: 0%; margin-top: -13%;" ></a><p style="color: white;margin-left: 25%; margin-top: -23%;">Karthik TT</p>
+                    <a href="#" class="fa fa-facebook " style="font-size: 20px;margin-left: 0%; margin-top: -13%;"></a><p style="color: white;margin-left: 25%; margin-top: -23%;">Yeshwanth G</p>
+                  </ul>
+                </div>
+
+                
+              </div>
+            <hr>
+            
+                
+              </div>
+            </div>
+      </footer>
+       
+
+          </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction</title>
+    <meta charset="UTF-8">
+        <!-- favicon -->
+        <!-- <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon"> -->
+        <!-- <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"> -->
+        <link rel="icon" type="image/JPG" sizes="16x16" href="/assets/img/favicon-32x32.png">
+        <!-- bootstrap css cdn -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <!-- css stylesheet -->
+        <link rel="stylesheet" href="static/css/style.css">
+        <!-- font styles cdn -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+          .container
+          {
+            background-color: green;
+          }
+          .our-focus 
+          {
+            background-color: green;
+          }
+          .site-footer
+          {
+            background-color: green;
+          }
+
+          .container-fluid{
+            background-color:green;
+            width: 100%;
+          }
+          body{
+            background-color:green;
+            
+          }
+          .navbar{
+            background-color:green;
+          }
+        
+        #img{
+          width:89.7%;
+          height: 435px;
+          float: center;
+          margin-left: 5.6%;
+          background-color: rgb(116, 81, 107);
+        }
+        </style>
+       
+        
+</head>
+<body  >
+        <!-- bootstrap navbar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark"  >
+            <div class="container-fluid" >
+              
+         <div class="ab" >
+
+              </div>
+              <div class="row donate-sponsor">
+               
+   
+               <a type="button" class="btn btn-warning mr-1" id="sponsor" href="homepage">Home Page</a>
+                
+                 <a type="button" class="btn btn-danger mr-1" id="sponsor" href="contactus">Contact Us</a>
+             
+              </div>
+            </div>
+          </nav>
+
+
+<div>
+
+
+
+          <!-- navbar ends -->
+       <!-- what we focus on -->
+       <h2 class="text-center mt-3" style="font-size:50px;color:red;text-shadow: 10px 10px 20px blue">Flood Prediction <br/><br/></h2>
+       <div class="mnopk" style="background-color: green; width:100%;height:50%; text-align:center">
+        
+	
+	
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="/y_predicttt" method="post">
+    
+
+    	<input style="width:35%;" type="text"  name="location" id="location" placeholder="Enter the location" required />
+    	<input style="width:35%;" type="text"  name="annual" id="annual" placeholder="Enter the Annual Rainfall" required />
+    	<input style="width:35%;" type="text"  name="jan" id="jan" placeholder="Enter the Jan-May Rainfall" required />
+    	<input style="width:35%;" type="text"  name="jun" id="jun" placeholder="Enter the Jun-Dec Rainfall" required />
+    	
+		</select>
+        <button style="width:20%;margin-top:10px;margin-left:40%" type="submit" class="btn btn-primary btn-block btn-large">Click here</button>
+    
+    </form>
+
+   <br>
+   <br><h2 style="color:red; font-size:25px ;">
+   <mark1  >{{ prediction_text }}
+ </div>
+       
+       </div>
+       
+       
+    
+    
+       
+              
+       
+       
+        <section class="our-focus">
+          <div class="container">
+              
+  
+             
+                  <div class="card" style="width: 30rem;height: 10rem;margin-left: -180px;margin-top: 10px;text-align:center">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Temperature</h5>
+                      <p class="card-text" style="font-size:40px;color:blue">{{temp}}
+                          </p>
+                    </div>
+                  </div>
+                </div>
+               
+                  <div class="card" style="width: 30rem;height: 10rem;margin-left: 32rem;margin-top: -160px;text-align:center ">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title" >Maximum Temperature</h5>
+                      <p class="card-text" style="font-size:40px;color:blue">{{maxt}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+               <div class="card" style="width: 30rem;height: 10rem;margin-left: 63rem;margin-top: -160px;text-align:center">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title" >Windspeed (mph)</h5>
+                      <p class="card-text" style="font-size:40px;color:blue">{{wspd}}
+                          </p>
+                    </div>
+                  </div>
+                </div>
+               
+                  <div class="card" style="width: 30rem;height: 10rem;margin-left: 25px;margin-top: 10px;text-align:center ">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Cloud Cover (%)</h5>
+                      <p class="card-text" style="font-size:40px;color:blue">{{cloudcover}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+               <div class="card" style="width: 30rem;height: 10rem;margin-left: 32rem;margin-top: -160px;text-align:center">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Precipitation (mm)</h5>
+                      <p class="card-text" style="font-size:40px;color:blue">{{percip}}</p>
+                    </div>
+                  </div>
+                </div>
+               
+                  <div class="card" style="width: 30rem;height: 10rem;margin-left: 63rem;margin-top: -164.3px;text-align:center ">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Humidity (%)</h5>
+                      <p class="card-text" style="font-size:40px;color:blue">{{humidity}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+            </div>
+          </section>
+          <!-- focus section ends -->
+
+       
+
+          </body>
+</html>
